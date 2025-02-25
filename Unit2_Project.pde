@@ -18,19 +18,30 @@ void setup() {
 }
 
 void draw() {
-  //noStroke();
+  noStroke();
 
   //sky
-  background(137, 136, 175);
+  background(191,223,242);
   
+//Mountain
+  fill(167,206,174);
+ triangle(mountain-170,600,mountain+110,100,mountain+300,600);
+ fill(156,198,164);
+ triangle(mountain+160,600,mountain+300,600,mountain+110,100);
+ fill(255);
+ triangle(mountain+66,177,mountain+110,100,mountain+140,177);
+  fill(218,234,221);
+ triangle(mountain+118,177,mountain+110,100,mountain+140,177);
 
 
   //ABuilding
-  fill(111, 102, 142);
+  fill(144,157,219);
   rect(buildingA-300, 200, 20, 400);
+  fill(209,181,222);
   rect(buildingA-280, 150, 250, 450);
 
   //Tower
+  fill(192,162,214);
   rect(buildingA, 170, 80, 20);
   rect(buildingA-30, 180, 150, 450);
   rect(buildingA+35, 60, 8, 60);
@@ -38,47 +49,97 @@ void draw() {
   rect(buildingA, 170, 80, 20);
 
   //BBuilding
+  fill(181,222,221);
   rect(buildingB-180, 300, 300, 400);
+  fill(229,227,155);
   rect(buildingB+100, 120, 200, 600);
 
   //Tower Light
-  fill(144, 135, 178);
+  fill(209,181,229);
   ellipse(buildingA+39, 58, 20, 20);
-  fill(154, 146, 184);
+  fill(224,203,240);
   ellipse(buildingA+39, 58, 10, 10);
-  fill(177, 169, 206);
+  fill(233,218,245);
   ellipse(buildingA+39, 58, 5, 5);
-  
-  //Mountain
- triangle(mountain-170,600,mountain+110,100,mountain+300,600);
+ 
 
   //TowerWindows
-  fill(94,87,118);
-  rect(buildingA+5, 240, 20, 20);
-  rect(buildingA+5, 300, 20, 20);
-  rect(buildingA+5, 360, 20, 20);
-  rect(buildingA+5, 420, 20, 20);
-  rect(buildingA+70, 240, 20, 20);
-  rect(buildingA+70, 300, 20, 20);
-  rect(buildingA+70, 360, 20, 20);
-  rect(buildingA+70, 420, 20, 20);
+  fill(0);
+rect(buildingA+70, 420, 20, 20);
+rect(buildingA+5, 240, 20, 20);
+rect(buildingA+70, 240, 20, 20);
+rect(buildingA+70, 300, 20, 20);
+fill(242,238,191);
+rect(buildingA+5, 300, 20, 20);
+rect(buildingA+5, 360, 20, 20);
+rect(buildingA+70, 360, 20, 20);
+rect(buildingA+5, 420, 20, 20);
+  
   //ABuildingWindows
-  rect(buildingA-240, 190, 30, 30);
-  rect(buildingA-240, 270, 30, 30);
-  rect(buildingA-240, 350, 30, 30);
-  rect(buildingA-240, 430, 30, 30);
-  rect(buildingA-240, 510, 30, 30);
-  rect(buildingA-170, 190, 30, 30);
-  rect(buildingA-170, 270, 30, 30);
-  rect(buildingA-170, 350, 30, 30);
-  rect(buildingA-170, 430, 30, 30);
-  rect(buildingA-170, 510, 30, 30);
-  rect(buildingA-100, 190, 30, 30);
-  rect(buildingA-100, 270, 30, 30);
-  rect(buildingA-100, 350, 30, 30);
-  rect(buildingA-100, 430, 30, 30);
-  rect(buildingA-100, 510, 30, 30);
+  fill(0);
+rect(buildingA-240, 350, 30, 30);
+rect(buildingA-100, 190, 30, 30);
+rect(buildingA-240, 190, 30, 30);
+rect(buildingA-170, 430, 30, 30);
+rect(buildingA-100, 350, 30, 30);
+rect(buildingA-170, 190, 30, 30);
+rect(buildingA-170, 510, 30, 30);
+fill(242,238,191);
+rect(buildingA-100, 510, 30, 30);
+rect(buildingA-100, 270, 30, 30);
+rect(buildingA-170, 350, 30, 30);
+rect(buildingA-100, 430, 30, 30);
+rect(buildingA-240, 430, 30, 30);
+rect(buildingA-240, 270, 30, 30);
+rect(buildingA-240, 510, 30, 30);
+rect(buildingA-170, 270, 30, 30);
+  
+  //BuildingB Windows black
+  fill(0);
+  rect(buildingB-150,490,30,30);
+  rect(buildingB-150,560,30,30);
+  rect(buildingB-60,420,30,30);
+  rect(buildingB+30,350,30,30);
+  rect(buildingB+30,490,30,30);
+  
+  //W colour
+  fill(242,238,191);
+  rect(buildingB-60,490,30,30);
+  rect(buildingB+30,560,30,30);
+  rect(buildingB-60,560,30,30);
+  rect(buildingB-60,350,30,30);
+  rect(buildingB-150,350,30,30);
+  rect(buildingB-150,420,30,30);
+  rect(buildingB+30,420,30,30);
+  
+  //BuildingB Windowss black
+  fill(0);
+rect(buildingB+250,180,25,25);
+rect(buildingB+250,390,25,25);
+rect(buildingB+250,320,25,25);
+rect(buildingB+200,460,25,25);
+rect(buildingB+140,600,25,25);
+rect(buildingB+140,460,25,25);
+rect(buildingB+250,250,25,25);
+rect(buildingB+140,320,25,25);
+rect(buildingB+250,530,25,25);
+rect(buildingB+200,600,25,25);
 
+
+//W colour
+fill(242,238,191);
+rect(buildingB+140,530,25,25);
+rect(buildingB+250,460,25,25);
+rect(buildingB+200,530,25,25);
+rect(buildingB+140,390,25,25);
+rect(buildingB+250,600,25,25);
+rect(buildingB+140,250,25,25);
+rect(buildingB+140,180,25,25);
+
+
+
+  
+  
 
 
   //BuildingA
@@ -98,10 +159,4 @@ void draw() {
   mountain=-270;
 }
 
-  fill(255, 0, 0);
-  ellipse(buildingA, 0, 30, 30);
-  fill(255, 255, 0);
-  ellipse(buildingB, 0, 30, 30);
-
-  println(mouseX, mouseY);
 }
