@@ -6,6 +6,7 @@
 int buildingB;
 int buildingA;
 int mountain;
+int cloud;
 
 void setup() {
   size(900, 600);
@@ -14,7 +15,9 @@ void setup() {
   buildingB=600;
   buildingA=300;
   mountain=-300;
+  cloud=300;
   
+
 }
 
 void draw() {
@@ -22,6 +25,8 @@ void draw() {
 
   //sky
   background(191,223,242);
+  
+
   
 //Mountain
   fill(167,206,174);
@@ -32,6 +37,15 @@ void draw() {
  triangle(mountain+66,177,mountain+110,100,mountain+140,177);
   fill(218,234,221);
  triangle(mountain+118,177,mountain+110,100,mountain+140,177);
+ 
+  //Clouds
+  fill(255);
+  ellipse(cloud-50,290,100,60);
+  ellipse(cloud-30,260,100,60);
+  ellipse(cloud-10,290,150,60);
+  ellipse(cloud-25,260,40,20);
+  
+  ellipse(cloud+100,100,150,90);
 
 
   //ABuilding
@@ -135,28 +149,29 @@ rect(buildingB+140,390,25,25);
 rect(buildingB+250,600,25,25);
 rect(buildingB+140,250,25,25);
 rect(buildingB+140,180,25,25);
-
-
-
-  
   
 
 
   //BuildingA
-  buildingA=buildingA+1;
+  buildingA=buildingA+3;
   if (buildingA>1200) {
     buildingA=-170;
   }
 
   //BuildingB
-  buildingB=buildingB+1;
+  buildingB=buildingB+3;
   if (buildingB>1080) {
     buildingB=-290;
   }
   //Mountain
-  mountain=mountain+1;
+  mountain=mountain+3;
   if (mountain>1100) {
   mountain=-270;
+}
+//Cloud
+cloud=cloud+1;
+if (cloud>920) {
+  cloud=-20;
 }
 
 }
