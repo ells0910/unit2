@@ -2,11 +2,13 @@
 //2-3
 //2/18/2025
 
+
 //Variables
 int buildingB;
 int buildingA;
 int mountain;
-int cloud;
+int cloud1;
+int cloud2;
 
 void setup() {
   size(900, 600);
@@ -15,8 +17,10 @@ void setup() {
   buildingB=600;
   buildingA=300;
   mountain=-300;
-  cloud=300;
+  cloud1=450;
+  cloud2=200;
   
+//noLoop();
 
 }
 
@@ -27,6 +31,35 @@ void draw() {
   background(191,223,242);
   
 
+//Clouds
+fill(255);
+ellipse(cloud1+50,290,100,60);
+ellipse(cloud1+70,260,100,60);
+ellipse(cloud1+90,290,150,60);
+
+ellipse(cloud1+200,100,150,90);
+ellipse(cloud1+240,120,200,80);
+ellipse(cloud1+300,110,140,80);
+ellipse(cloud1+290,90,90,70);
+ellipse(cloud1+250,60,80,50);
+
+ellipse(cloud1-200,20,200,90);
+ellipse(cloud1-120,30,130,90);
+
+ellipse(cloud1-300,190,150,60);
+ellipse(cloud1-300,160,130,60);
+ellipse(cloud1-250,190,150,60);
+
+//Cloud2
+ellipse(cloud2-670,160,150,90);
+ellipse(cloud2-700,170,200,80);
+ellipse(cloud2-780,150,140,80);
+ellipse(cloud2-770,140,90,70);
+ellipse(cloud2-730,120,80,50);
+
+ellipse(cloud2-280,280,100,60);
+ellipse(cloud2-290,270,100,60);
+ellipse(cloud2-310,300,150,60);
   
 //Mountain
   fill(167,206,174);
@@ -38,14 +71,6 @@ void draw() {
   fill(218,234,221);
  triangle(mountain+118,177,mountain+110,100,mountain+140,177);
  
-  //Clouds
-  fill(255);
-  ellipse(cloud-50,290,100,60);
-  ellipse(cloud-30,260,100,60);
-  ellipse(cloud-10,290,150,60);
-  ellipse(cloud-25,260,40,20);
-  
-  ellipse(cloud+100,100,150,90);
 
 
   //ABuilding
@@ -149,7 +174,7 @@ rect(buildingB+140,390,25,25);
 rect(buildingB+250,600,25,25);
 rect(buildingB+140,250,25,25);
 rect(buildingB+140,180,25,25);
-  
+
 
 
   //BuildingA
@@ -168,10 +193,16 @@ rect(buildingB+140,180,25,25);
   if (mountain>1100) {
   mountain=-270;
 }
-//Cloud
-cloud=cloud+1;
-if (cloud>920) {
-  cloud=-20;
+//Cloud1
+cloud1=cloud1+1;
+if (cloud1>1300) {
+  cloud1=-365;
 }
+//Cloud2
+cloud2=cloud2+1;
+if (cloud2>1770) {
+  cloud2=220;
+}
+
 
 }
